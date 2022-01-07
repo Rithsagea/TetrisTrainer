@@ -1,4 +1,4 @@
-package com.rithsagea.tetris;
+package com.rithsagea.tetris.api;
 
 public class TetrisBoard {
 	private int width;

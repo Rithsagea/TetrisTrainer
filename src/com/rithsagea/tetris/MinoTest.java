@@ -1,6 +1,10 @@
 package com.rithsagea.tetris;
 
-public class Test {
+import com.rithsagea.tetris.api.TetrisBoard;
+import com.rithsagea.tetris.api.Tetromino;
+import com.rithsagea.tetris.api.TetrominoColor;
+
+public class MinoTest {
 	
 	private static final int WIDTH = 5;
 	private static final int HEIGHT = 5;

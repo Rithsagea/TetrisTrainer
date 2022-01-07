@@ -1,4 +1,4 @@
-package com.rithsagea.tetris;
+package com.rithsagea.tetris.api;
 
 public enum Tetromino {
 	I(TetrominoColor.CYAN, "-1,0|0,0|1,0|2,0"),

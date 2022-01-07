@@ -1,4 +1,4 @@
-package com.rithsagea.tetris;
+package com.rithsagea.tetris.api;
 
 public class TetrominoColor {
 	public static final int DARK_GRAY = 1;
