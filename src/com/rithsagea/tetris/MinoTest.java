@@ -10,7 +10,7 @@ public class MinoTest {
 	private static final int HEIGHT = 5;
 	
 	private static TetrisBoard generate(Tetromino m, int r) {
-		TetrisBoard board = new TetrisBoard(WIDTH, HEIGHT);
+		TetrisBoard board = new TetrisBoard(WIDTH, HEIGHT, 0L);
 		board.write(m, r, WIDTH / 2, HEIGHT / 2);
 		board.set(WIDTH / 2, HEIGHT / 2, TetrominoColor.GRAY);
 		

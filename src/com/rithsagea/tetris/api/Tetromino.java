@@ -1,19 +1,21 @@
 package com.rithsagea.tetris.api;
 
 public enum Tetromino {
-	I(TetrominoColor.CYAN, "-1,0|0,0|1,0|2,0"),
-	J(TetrominoColor.BLUE, "-1,1|-1,0|0,0|1,0"),
-	L(TetrominoColor.ORANGE, "-1,0|0,0|1,0|1,1"),
-	O(TetrominoColor.YELLOW, "0,0|0,1|1,1|1,0"),
-	S(TetrominoColor.LIME, "-1,0|0,0|0,1|1,1"),
-	T(TetrominoColor.MAGENTA, "-1,0|0,0|0,1|1,0"),
-	Z(TetrominoColor.RED, "-1,1|0,1|0,0|1,0");
+	I(TetrominoColor.CYAN, TetrominoData.KICK_TABLE_2, "-1,0|0,0|1,0|2,0"),
+	J(TetrominoColor.BLUE, TetrominoData.KICK_TABLE_1, "-1,1|-1,0|0,0|1,0"),
+	L(TetrominoColor.ORANGE, TetrominoData.KICK_TABLE_1, "-1,0|0,0|1,0|1,1"),
+	O(TetrominoColor.YELLOW, TetrominoData.KICK_TABLE_3, "0,0|0,1|1,1|1,0"),
+	S(TetrominoColor.LIME, TetrominoData.KICK_TABLE_1, "-1,0|0,0|0,1|1,1"),
+	T(TetrominoColor.MAGENTA, TetrominoData.KICK_TABLE_1, "-1,0|0,0|0,1|1,0"),
+	Z(TetrominoColor.RED, TetrominoData.KICK_TABLE_1, "-1,1|0,1|0,0|1,0");
 	
 	private int color;
 	private final int[][][] data;
+	private final int[][][] kickTable;
 	
-	private Tetromino(int color, String str) {
+	private Tetromino(int color, int[][][] kickTable, String str) {
 		this.color = color;
+		this.kickTable = kickTable;
 		this.data = new int[4][4][2];
 		
 		String[] blocks = str.split("\\|");
@@ -37,5 +39,9 @@ public enum Tetromino {
 	
 	public int[][][] getData() {
 		return data;
+	}
+	
+	public int[][][] getKickTable() {
+		return kickTable;
 	}
 }
